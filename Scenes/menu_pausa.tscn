@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dy8qinqamk1tg"]
+
+[ext_resource type="Script" uid="uid://b48la3fewx26x" path="res://Scenes/menu_pausa.gd" id="1_4gs4c"]
+
+[node name="MenuPausa" type="CanvasLayer" unique_id=810587599]
+layer = 100
+script = ExtResource("1_4gs4c")
+
+[node name="Control" type="Control" parent="." unique_id=103842739]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=694972222]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 3.325
+anchor_bottom = 2.575
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.23392546, 0.23392546, 0.23392543, 0.5019608)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=92471211]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.44200003
+anchor_top = 0.42200002
+anchor_right = 0.558
+anchor_bottom = 0.578
+offset_left = 0.315979
+offset_top = 0.04397583
+offset_right = -0.31604004
+offset_bottom = -0.044006348
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BtnContinuar" type="Button" parent="Control/VBoxContainer" unique_id=673744827]
+layout_mode = 2
+text = "Continuar"
+
+[node name="BtnConfiguraciones" type="Button" parent="Control/VBoxContainer" unique_id=1405820991]
+layout_mode = 2
+text = "Configuraciones"
+
+[node name="BtnSalir" type="Button" parent="Control/VBoxContainer" unique_id=1124639992]
+layout_mode = 2
+text = "Salir"

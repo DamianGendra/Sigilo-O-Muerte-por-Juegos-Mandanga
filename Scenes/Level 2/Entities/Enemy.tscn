@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dwsca050brq2p"]
+
+[ext_resource type="Script" uid="uid://08fqc7k3j5ms" path="res://Scripts/Level 2/Enemy.gd" id="1_wovta"]
+[ext_resource type="PackedScene" uid="uid://dhm4giigqnu2l" path="res://Scenes/Level 2/Entities/Bullet.tscn" id="2_xeo28"]
+[ext_resource type="Texture2D" uid="uid://18cro3d6amkv" path="res://Scenes/survivor-idle_rifle_0-1.png" id="3_itgib"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_og2xq"]
+radius = 8.339998
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xeo28"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=163907166]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_wovta")
+bullet_scene = ExtResource("2_xeo28")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=216553877]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1221971972]
+position = Vector2(-12, 4)
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_og2xq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=816344362]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_itgib")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1846213096]
+offset_left = -108.0
+offset_top = -12.0
+offset_right = 39.0
+offset_bottom = 15.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.5, 0.5)
+offset_transform_rotation = 1.5707964
+theme_override_styles/fill = SubResource("StyleBoxFlat_xeo28")

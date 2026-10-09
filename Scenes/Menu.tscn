@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dy2sub34aunhk"]
+
+[ext_resource type="Script" uid="uid://bkbfwhcjnewbh" path="res://Scripts/Menu.gd" id="1_3kf3n"]
+
+[node name="Main" type="Node" unique_id=1562964506]
+
+[node name="MainMenu" type="Control" parent="." unique_id=999537966]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3kf3n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu" unique_id=33630431]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="MainMenu/VBoxContainer" unique_id=402781429]
+layout_mode = 2
+text = "Jugar"
+
+[node name="OptionsButton" type="Button" parent="MainMenu/VBoxContainer" unique_id=952030698]
+layout_mode = 2
+text = "Opciones"
+
+[node name="ExitButton" type="Button" parent="MainMenu/VBoxContainer" unique_id=60971646]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/PlayButton" to="MainMenu" method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/ExitButton" to="MainMenu" method="_on_boton_salir_pressed"]

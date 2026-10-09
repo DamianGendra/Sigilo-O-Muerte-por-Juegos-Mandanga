@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dahva5f6tyjuh"]
+
+[ext_resource type="Script" uid="uid://dwm6ntf0nx3el" path="res://Scripts/Level 1/Enemy.gd" id="1_4f2ra"]
+[ext_resource type="Texture2D" uid="uid://c2tyttw3dfu1d" path="res://Scenes/Level 1/1-2/idlesoldier.png" id="2_4f2ra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_og2xq"]
+size = Vector2(34, 57)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=514578086]
+script = ExtResource("1_4f2ra")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=624292441]
+position = Vector2(-6, -6.5)
+shape = SubResource("RectangleShape2D_og2xq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1267691325]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_4f2ra")
