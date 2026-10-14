@@ -10,10 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Sigilo Mandanga"
+config/name="Sigilo Mandanga Final Final Final"
 run/main_scene="uid://dy2sub34aunhk"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://djmaqt3k801ue"
 
 [display]
 

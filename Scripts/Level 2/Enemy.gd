@@ -105,7 +105,6 @@ func _can_see_player() -> bool:
 
 
 func _state_patrol(delta: float) -> void:
-	# Guard
 	_stop(delta)
 	_idle_time += delta
 	rotation = _idle_base + sin(_idle_time * 0.8) * 0.7
@@ -152,7 +151,6 @@ func _state_search(delta: float) -> void:
 		_face_velocity(delta)
 		return
 
-	# Look arround
 	_stop(delta)
 	rotation += _scan_dir * 1.5 * delta
 	if _search_timer < search_time * 0.5 and not _scan_flipped:
@@ -220,3 +218,5 @@ func take_damage(amount: int, from_position := Vector2.INF) -> void:
 func die() -> void:
 	died.emit()
 	queue_free()
+	GameState.player_won = true
+	GameState.player_won = false

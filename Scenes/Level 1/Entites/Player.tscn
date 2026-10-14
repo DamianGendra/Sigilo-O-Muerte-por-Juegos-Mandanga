@@ -1,40 +1,44 @@
 [gd_scene format=3 uid="uid://btxopqh35ds"]
 
 [ext_resource type="Script" uid="uid://dl801qiy0fqps" path="res://Scripts/Level 1/Player.gd" id="1_jx2hv"]
-[ext_resource type="Texture2D" uid="uid://cxamdr3661fox" path="res://Scenes/animacion6.png" id="2_786b2"]
-[ext_resource type="Texture2D" uid="uid://0cp2liejuejf" path="res://Scenes/animacion1.png" id="3_has2k"]
-[ext_resource type="Texture2D" uid="uid://bjpvto1d1206y" path="res://Scenes/animacion2.png" id="4_rj5o6"]
-[ext_resource type="Texture2D" uid="uid://41arh8jf7whi" path="res://Scenes/animacion3.png" id="5_f5cgk"]
-[ext_resource type="Texture2D" uid="uid://bpvb82wexco7i" path="res://Scenes/animacion4.png" id="6_q1skl"]
-[ext_resource type="Texture2D" uid="uid://cqoxb5qbw1n0a" path="res://Scenes/animacion5.png" id="7_3oilv"]
+[ext_resource type="Texture2D" uid="uid://b68m1o5omhqfv" path="res://Scenes/Level 1/1-3/runsoldier0.png" id="2_has2k"]
+[ext_resource type="Texture2D" uid="uid://ct3okisxyv7la" path="res://Scenes/Level 1/1-3/runsoldier1.png" id="3_rj5o6"]
+[ext_resource type="Texture2D" uid="uid://bfmnoe6g1nxar" path="res://Scenes/Level 1/1-3/runsoldier2.png" id="4_f5cgk"]
+[ext_resource type="Texture2D" uid="uid://do0ws7ssghata" path="res://Scenes/Level 1/1-3/runsoldier3.png" id="5_q1skl"]
+[ext_resource type="Texture2D" uid="uid://dj3ag8jyt8di6" path="res://Scenes/Level 1/1-3/runsoldier4.png" id="6_3oilv"]
+[ext_resource type="Texture2D" uid="uid://4lslgjxb5exu" path="res://Scenes/Level 1/1-3/runsoldier5.png" id="7_jtmya"]
+[ext_resource type="Texture2D" uid="uid://iec8hlb3cuql" path="res://Scenes/Level 1/1-3/runsoldier6.png" id="8_hvjv0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t0bds"]
-size = Vector2(38, 46)
+size = Vector2(30, 25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3r8mg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_786b2")
+"texture": ExtResource("2_has2k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_has2k")
+"texture": ExtResource("3_rj5o6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_rj5o6")
+"texture": ExtResource("4_f5cgk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_f5cgk")
+"texture": ExtResource("5_q1skl")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_q1skl")
+"texture": ExtResource("6_3oilv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_3oilv")
+"texture": ExtResource("7_jtmya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hvjv0")
 }],
 "loop": 1,
 "name": &"Player Lv1",
-"speed": 7.0
+"speed": 10.0
 }, {
 "frames": [],
 "loop": 1,
@@ -83,14 +87,14 @@ _data = {
 script = ExtResource("1_jx2hv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1943653635]
-position = Vector2(-4, 23)
+position = Vector2(-9, 9.5)
 shape = SubResource("RectangleShape2D_t0bds")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1777178644 groups=["Player"]]
-scale = Vector2(3, 3)
+scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_3r8mg")
 animation = &"Player Lv1"
-frame_progress = 0.75081867
+frame_progress = 0.6784162
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=241093600]
 libraries/ = SubResource("AnimationLibrary_has2k")
